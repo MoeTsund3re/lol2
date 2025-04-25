@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+
+    <style>
+        .square{
+            width: 40px;
+            height: 40px;
+            border-radius: 100%;
+            background-color: rgb(51, 183, 223);
+            position: absolute;
+            overflow: hidden;
+            z-index: -100;
+        }
+    </style>
+
+    <!--  -->
+
+    <button id="el">Нажми</button><br><br><br><br><br>
+    <img src="img/lol.png" alt="lol">
+
+
+    <script>
+        let but = document.getElementById("el");
+        
+        function text() {
+            but.innerHTML = 'Вы нажали на меня!'; 
+        }
+        
+        but.addEventListener('click', text);
+    </script>
+
+    <!--  -->
+
+    <div class="square" id="sq"></div>
+
+    <script>
+
+        let sq = document.getElementById("sq")
+        
+        document.addEventListener('mousemove', function(event) {
+            sq.style.left = event.clientX + 'px';
+            sq.style.top = event.clientY + 'px';
+        });
+
+    </script>
+
+
+
+
+
+</body>
+
+</html>
